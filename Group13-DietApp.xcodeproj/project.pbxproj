@@ -11,11 +11,13 @@
 		75F69B6829CE015A00F6EE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B6729CE015A00F6EE36 /* ContentView.swift */; };
 		75F69B6A29CE015A00F6EE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F69B6929CE015A00F6EE36 /* Assets.xcassets */; };
 		75F69B6D29CE015A00F6EE36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F69B6C29CE015A00F6EE36 /* Preview Assets.xcassets */; };
-		75F69B7429CE024600F6EE36 /* DietView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7329CE024600F6EE36 /* DietView.swift */; };
+		75F69B7429CE024600F6EE36 /* DietListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7329CE024600F6EE36 /* DietListView.swift */; };
 		75F69B7629CE033F00F6EE36 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7529CE033F00F6EE36 /* RecipeListView.swift */; };
 		75F69B7829CE039F00F6EE36 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7729CE039F00F6EE36 /* RecipeModel.swift */; };
 		75F69B7A29CE03B700F6EE36 /* DietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7929CE03B700F6EE36 /* DietModel.swift */; };
 		75F69B7C29CE063000F6EE36 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7B29CE063000F6EE36 /* APIController.swift */; };
+		75F69B7F29CE2D9F00F6EE36 /* SingleRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7E29CE2D9F00F6EE36 /* SingleRecipeView.swift */; };
+		75F69B8129CE2ED400F6EE36 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B8029CE2ED400F6EE36 /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,11 +26,14 @@
 		75F69B6729CE015A00F6EE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75F69B6929CE015A00F6EE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F69B6C29CE015A00F6EE36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		75F69B7329CE024600F6EE36 /* DietView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietView.swift; sourceTree = "<group>"; };
+		75F69B7329CE024600F6EE36 /* DietListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietListView.swift; sourceTree = "<group>"; };
 		75F69B7529CE033F00F6EE36 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		75F69B7729CE039F00F6EE36 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		75F69B7929CE03B700F6EE36 /* DietModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietModel.swift; sourceTree = "<group>"; };
 		75F69B7B29CE063000F6EE36 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		75F69B7D29CE2D0900F6EE36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		75F69B7E29CE2D9F00F6EE36 /* SingleRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleRecipeView.swift; sourceTree = "<group>"; };
+		75F69B8029CE2ED400F6EE36 /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,15 +66,18 @@
 		75F69B6429CE015A00F6EE36 /* Group13-DietApp */ = {
 			isa = PBXGroup;
 			children = (
+				75F69B7D29CE2D0900F6EE36 /* Info.plist */,
 				75F69B6529CE015A00F6EE36 /* Group13_DietApp.swift */,
 				75F69B6729CE015A00F6EE36 /* ContentView.swift */,
 				75F69B6929CE015A00F6EE36 /* Assets.xcassets */,
 				75F69B6B29CE015A00F6EE36 /* Preview Content */,
-				75F69B7329CE024600F6EE36 /* DietView.swift */,
+				75F69B7329CE024600F6EE36 /* DietListView.swift */,
 				75F69B7529CE033F00F6EE36 /* RecipeListView.swift */,
 				75F69B7729CE039F00F6EE36 /* RecipeModel.swift */,
 				75F69B7929CE03B700F6EE36 /* DietModel.swift */,
 				75F69B7B29CE063000F6EE36 /* APIController.swift */,
+				75F69B7E29CE2D9F00F6EE36 /* SingleRecipeView.swift */,
+				75F69B8029CE2ED400F6EE36 /* RecipeCell.swift */,
 			);
 			path = "Group13-DietApp";
 			sourceTree = "<group>";
@@ -153,11 +161,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				75F69B7C29CE063000F6EE36 /* APIController.swift in Sources */,
-				75F69B7429CE024600F6EE36 /* DietView.swift in Sources */,
+				75F69B7429CE024600F6EE36 /* DietListView.swift in Sources */,
 				75F69B7A29CE03B700F6EE36 /* DietModel.swift in Sources */,
+				75F69B8129CE2ED400F6EE36 /* RecipeCell.swift in Sources */,
 				75F69B7829CE039F00F6EE36 /* RecipeModel.swift in Sources */,
 				75F69B6829CE015A00F6EE36 /* ContentView.swift in Sources */,
 				75F69B7629CE033F00F6EE36 /* RecipeListView.swift in Sources */,
+				75F69B7F29CE2D9F00F6EE36 /* SingleRecipeView.swift in Sources */,
 				75F69B6629CE015A00F6EE36 /* Group13_DietApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +299,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Group13-DietApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Group13-DietApp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -317,7 +327,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Group13-DietApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Group13-DietApp/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

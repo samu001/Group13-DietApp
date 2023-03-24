@@ -13,7 +13,7 @@ struct RecipeListView: View {
         NavigationView {
             List {
                 ForEach(recipes, id: \.id) { recipe in
-                   // RecipeCell(recipe: recipe)
+                   RecipeCell(recipe: recipe)
                 }
             }
             .listStyle(.inset)

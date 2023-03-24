@@ -33,29 +33,3 @@ class recipeAPI: ObservableObject {
     }
 }
 
-
-class dietAPI: ObservableObject {
-    
-    @Published var results = [JSONDietResult.Diet]()
-    var url: String!
-    
-    init(api: String) {
-        url = api
-    }
-    
-    func loadData() async {
-        guard let url = URL(string: url) else {
-            print("Invalid URL")
-            return
-        }
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            
-            if let decodedResponse = try? JSONDecoder().decode(JSONDietResult.self, from: data) {
-                results = decodedResponse.results
-            }
-        } catch {
-            print("Invalid data")
-        }
-    }
-}
