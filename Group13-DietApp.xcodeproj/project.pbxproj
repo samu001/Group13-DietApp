@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75F69B6629CE015A00F6EE36 /* Group13_DietAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B6529CE015A00F6EE36 /* Group13_DietAppApp.swift */; };
+		75F69B6629CE015A00F6EE36 /* Group13_DietApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B6529CE015A00F6EE36 /* Group13_DietApp.swift */; };
 		75F69B6829CE015A00F6EE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B6729CE015A00F6EE36 /* ContentView.swift */; };
 		75F69B6A29CE015A00F6EE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F69B6929CE015A00F6EE36 /* Assets.xcassets */; };
 		75F69B6D29CE015A00F6EE36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F69B6C29CE015A00F6EE36 /* Preview Assets.xcassets */; };
+		75F69B7429CE024600F6EE36 /* DietView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7329CE024600F6EE36 /* DietView.swift */; };
+		75F69B7629CE033F00F6EE36 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7529CE033F00F6EE36 /* RecipeListView.swift */; };
+		75F69B7829CE039F00F6EE36 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7729CE039F00F6EE36 /* RecipeModel.swift */; };
+		75F69B7A29CE03B700F6EE36 /* DietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7929CE03B700F6EE36 /* DietModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		75F69B6229CE015A00F6EE36 /* Group13-DietApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group13-DietApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		75F69B6529CE015A00F6EE36 /* Group13_DietAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group13_DietAppApp.swift; sourceTree = "<group>"; };
+		75F69B6529CE015A00F6EE36 /* Group13_DietApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group13_DietApp.swift; sourceTree = "<group>"; };
 		75F69B6729CE015A00F6EE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		75F69B6929CE015A00F6EE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75F69B6C29CE015A00F6EE36 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		75F69B7329CE024600F6EE36 /* DietView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietView.swift; sourceTree = "<group>"; };
+		75F69B7529CE033F00F6EE36 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
+		75F69B7729CE039F00F6EE36 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		75F69B7929CE03B700F6EE36 /* DietModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,14 @@
 		75F69B6429CE015A00F6EE36 /* Group13-DietApp */ = {
 			isa = PBXGroup;
 			children = (
-				75F69B6529CE015A00F6EE36 /* Group13_DietAppApp.swift */,
+				75F69B6529CE015A00F6EE36 /* Group13_DietApp.swift */,
 				75F69B6729CE015A00F6EE36 /* ContentView.swift */,
 				75F69B6929CE015A00F6EE36 /* Assets.xcassets */,
 				75F69B6B29CE015A00F6EE36 /* Preview Content */,
+				75F69B7329CE024600F6EE36 /* DietView.swift */,
+				75F69B7529CE033F00F6EE36 /* RecipeListView.swift */,
+				75F69B7729CE039F00F6EE36 /* RecipeModel.swift */,
+				75F69B7929CE03B700F6EE36 /* DietModel.swift */,
 			);
 			path = "Group13-DietApp";
 			sourceTree = "<group>";
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F69B7429CE024600F6EE36 /* DietView.swift in Sources */,
+				75F69B7A29CE03B700F6EE36 /* DietModel.swift in Sources */,
+				75F69B7829CE039F00F6EE36 /* RecipeModel.swift in Sources */,
 				75F69B6829CE015A00F6EE36 /* ContentView.swift in Sources */,
-				75F69B6629CE015A00F6EE36 /* Group13_DietAppApp.swift in Sources */,
+				75F69B7629CE033F00F6EE36 /* RecipeListView.swift in Sources */,
+				75F69B6629CE015A00F6EE36 /* Group13_DietApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
