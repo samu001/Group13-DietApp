@@ -15,6 +15,7 @@
 		75F69B7629CE033F00F6EE36 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7529CE033F00F6EE36 /* RecipeListView.swift */; };
 		75F69B7829CE039F00F6EE36 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7729CE039F00F6EE36 /* RecipeModel.swift */; };
 		75F69B7A29CE03B700F6EE36 /* DietModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7929CE03B700F6EE36 /* DietModel.swift */; };
+		75F69B7C29CE063000F6EE36 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7B29CE063000F6EE36 /* APIController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		75F69B7529CE033F00F6EE36 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		75F69B7729CE039F00F6EE36 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		75F69B7929CE03B700F6EE36 /* DietModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietModel.swift; sourceTree = "<group>"; };
+		75F69B7B29CE063000F6EE36 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				75F69B7529CE033F00F6EE36 /* RecipeListView.swift */,
 				75F69B7729CE039F00F6EE36 /* RecipeModel.swift */,
 				75F69B7929CE03B700F6EE36 /* DietModel.swift */,
+				75F69B7B29CE063000F6EE36 /* APIController.swift */,
 			);
 			path = "Group13-DietApp";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F69B7C29CE063000F6EE36 /* APIController.swift in Sources */,
 				75F69B7429CE024600F6EE36 /* DietView.swift in Sources */,
 				75F69B7A29CE03B700F6EE36 /* DietModel.swift in Sources */,
 				75F69B7829CE039F00F6EE36 /* RecipeModel.swift in Sources */,
