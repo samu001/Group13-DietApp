@@ -23,12 +23,8 @@ struct RecipeCell: View {
                 },
                            placeholder: {
                     ProgressView(){
-                        Image("placeholder-image")
-                            .resizable()
-                            .scaledToFit()
-                            .background()
-                            .frame(maxWidth: 100)
-                    } .progressViewStyle(.linear).frame(maxWidth: 100)
+                        Text("loading...")
+                    } .progressViewStyle(.circular).frame(maxWidth: 100)
                 })
                 .frame(height: 120.0)
                 .padding(.zero)
