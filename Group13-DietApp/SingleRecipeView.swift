@@ -26,16 +26,17 @@ struct SingleRecipeView: View {
                     },
                                placeholder: {
                         ProgressView(){
-                            Image("placeholder-image")
-                                .resizable()
-                                .scaledToFit()
-                                .background()
-                        } .progressViewStyle(.linear)
+                            Text("Loading Image...")
+                        } .progressViewStyle(.circular)
                     }
                     )
-                    HStack(alignment: .top) {
-                        Text(recipe.description).padding(.horizontal)
-                    }
+                }
+                VStack{
+                    Text(recipe.description).padding(.horizontal)
+                    Spacer()
+                    
+                    ingredientBox(recipe.ingredients)
+                    Text(recipe.instructions)
                 }
                 .navigationTitle(recipe.title).navigationBarTitleDisplayMode(.inline).padding()
             }
@@ -53,4 +54,24 @@ struct SingleRecipeView_Previews: PreviewProvider {
     static var previews: some View {
         SingleRecipeView(recipe: JSONRecipeResult.Recipe.exampleRecipes[0])
     }
+}
+
+
+func ingredientBox(_ ingredients: [String]) -> some View {
+    return
+        VStack {
+            Text("Ingredients")
+                .font(.title2)
+            VStack{
+                ForEach(ingredients, id: \.self) { string in
+                    Text(string)
+                }
+            }
+            .font(.title2)
+            .padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(lineWidth: 2)
+            )
+        }.padding()
 }
