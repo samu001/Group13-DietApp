@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeCell: View {
-    let recipe: JSONRecipeResult.Recipe
+    let recipe: Recipe
     
     var body: some View {
         
@@ -16,7 +16,7 @@ struct RecipeCell: View {
             SingleRecipeView(recipe: recipe)
         } label: {
             HStack {
-                AsyncImage(url: URL(string: recipe.imageURL), content:
+                AsyncImage(url: URL(string: recipe.image), content:
                 { image in image.resizable()
                         .scaledToFit()
                         .frame(maxWidth: 100)
@@ -35,11 +35,7 @@ struct RecipeCell: View {
                         .foregroundColor(Color.primary)
                         .multilineTextAlignment(.leading)
                         .lineLimit(1)
-                    Text(recipe.description)
-                        .font(.body)
-                        .foregroundColor(Color.secondary)
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(3)
+                    
                 }
                 .frame(maxWidth: .infinity)
             }
@@ -49,6 +45,6 @@ struct RecipeCell: View {
 
 struct RecipeCell_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeCell(recipe: JSONRecipeResult.Recipe.exampleRecipes[0])
+        RecipeCell(recipe: exampleRecipes[0])
     }
 }

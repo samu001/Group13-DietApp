@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeListView: View {
-    let recipes: [JSONRecipeResult.Recipe]
+    let recipes: [Recipe]
     var body: some View {
         NavigationView {
             List {
@@ -24,6 +24,6 @@ struct RecipeListView: View {
 
 struct RecipeListView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeListView(recipes: JSONRecipeResult.Recipe.exampleRecipes)
+        RecipeListView(recipes: exampleRecipes)
     }
 }

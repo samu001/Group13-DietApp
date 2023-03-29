@@ -10,7 +10,6 @@
 		75F69B6629CE015A00F6EE36 /* Group13_DietApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B6529CE015A00F6EE36 /* Group13_DietApp.swift */; };
 		75F69B6829CE015A00F6EE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B6729CE015A00F6EE36 /* ContentView.swift */; };
 		75F69B6A29CE015A00F6EE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F69B6929CE015A00F6EE36 /* Assets.xcassets */; };
-		75F69B6D29CE015A00F6EE36 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F69B6C29CE015A00F6EE36 /* Preview Assets.xcassets */; };
 		75F69B7429CE024600F6EE36 /* DietListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7329CE024600F6EE36 /* DietListView.swift */; };
 		75F69B7629CE033F00F6EE36 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7529CE033F00F6EE36 /* RecipeListView.swift */; };
 		75F69B7829CE039F00F6EE36 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7729CE039F00F6EE36 /* RecipeModel.swift */; };
@@ -18,6 +17,7 @@
 		75F69B7C29CE063000F6EE36 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7B29CE063000F6EE36 /* APIController.swift */; };
 		75F69B7F29CE2D9F00F6EE36 /* SingleRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B7E29CE2D9F00F6EE36 /* SingleRecipeView.swift */; };
 		75F69B8129CE2ED400F6EE36 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B8029CE2ED400F6EE36 /* RecipeCell.swift */; };
+		75F8A2E329D3BC09004297D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F69B6C29CE015A00F6EE36 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -148,7 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F69B6D29CE015A00F6EE36 /* Preview Assets.xcassets in Resources */,
+				75F8A2E329D3BC09004297D7 /* Preview Assets.xcassets in Resources */,
 				75F69B6A29CE015A00F6EE36 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

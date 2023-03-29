@@ -7,9 +7,17 @@
 
 import SwiftUI
 
+// urlBase + urlAPI + diet + diet_parameter + resultNumber + integer
+
+
+
 struct ContentView: View {
+    
     var body: some View {
-        DietListView(diets: DietModel.staticDiets.array)
+        VStack {
+            DietListView(diets: DietModel.staticDiets.array)
+            
+        }
     }
 }
 

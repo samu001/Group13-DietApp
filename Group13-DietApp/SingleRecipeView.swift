@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SingleRecipeView: View {
     
-    let recipe: JSONRecipeResult.Recipe
+    let recipe: Recipe
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -17,7 +17,7 @@ struct SingleRecipeView: View {
         ZStack {
             ScrollView{
                 VStack {
-                    AsyncImage(url: URL(string: recipe.imageURL),
+                    AsyncImage(url: URL(string: recipe.image),
                                content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fit)
@@ -32,17 +32,17 @@ struct SingleRecipeView: View {
                     )
                 }
                 VStack{
-                    Text(recipe.description).padding(.horizontal)
+                    Text(recipe.title).padding(.horizontal)
                     Spacer()
                     
-                    ingredientBox(recipe.ingredients)
-                    Text(recipe.instructions)
+                    //ingredientBox(recipe.extendedIngredients.de)
+                   
                 }
                 .navigationTitle(recipe.title).navigationBarTitleDisplayMode(.inline).padding()
             }
             }
             .background(
-                AsyncImage(url: URL(string: recipe.imageURL))
+                AsyncImage(url: URL(string: recipe.image))
                     .blur(radius: 100)
                     .brightness(colorScheme == .light ? 0.5 : -0.2)
 
@@ -52,7 +52,7 @@ struct SingleRecipeView: View {
 
 struct SingleRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleRecipeView(recipe: JSONRecipeResult.Recipe.exampleRecipes[0])
+        SingleRecipeView(recipe: exampleRecipes[0])
     }
 }
 

@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSEnvironment</key>
+	<dict>
+		<key>api_key</key>
+		<string>d0cdfe10172549139f290c322a14702f</string>
+	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UISceneConfigurations</key>
