@@ -13,7 +13,7 @@ struct DietListView: View {
         NavigationView {
             List {
                 ForEach(diets, id: \.id) { diet in
-                    // DietCell(diet: diet)
+                    DietCellModel(model: diet)
                 }
             }
             .listStyle(.inset)
