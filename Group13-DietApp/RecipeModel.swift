@@ -6,7 +6,7 @@
 //
 
 struct RecipeListModel: Codable {
-    let results: [MiniRecipe]
+    let results: [MiniRecipeModel]
 }
 
 struct MiniRecipeModel: Codable {
