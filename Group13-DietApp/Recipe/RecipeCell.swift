@@ -8,15 +8,19 @@
 import SwiftUI
 
 struct RecipeCell: View {
-    let recipe: MiniRecipeModel
     
-    let urlBase = "https://api.spoonacular.com/recipes/"
-    let urlEnd = "/information?apiKey=d0cdfe10172549139f290c322a14702f&includeNutrition=false"
+    let recipe: MiniRecipeModel
+    var url = ""
+    
+    init(recipe: MiniRecipeModel) {
+        self.recipe = recipe
+        self.url = "https://api.spoonacular.com/recipes/" + recipe.id.description + "/information?apiKey=d0cdfe10172549139f290c322a14702f&includeNutrition=false"
+    }
     
     var body: some View {
         
         NavigationLink {
-            SingleRecipeView(url: urlBase + recipe.id.description + urlEnd)
+            SingleRecipeView(url: url)
         } label: {
             HStack {
                 AsyncImage(url: URL(string: recipe.image), content:
