@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RecipeListView: View {
     
+    let diet: String
     let recipes: [MiniRecipeModel]
     var body: some View {
             List {
@@ -17,12 +18,12 @@ struct RecipeListView: View {
                 }
             }
             .listStyle(.inset)
-            .navigationTitle("Recipes")
+            .navigationTitle(diet + " Recipes")
     }
 }
 
 struct RecipeListView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeListView(recipes: exampleMiniRecipes)
+        RecipeListView(diet: "Dietname", recipes: exampleMiniRecipes)
     }
 }

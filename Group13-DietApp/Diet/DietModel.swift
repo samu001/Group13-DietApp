@@ -25,19 +25,26 @@ struct DietModel: Codable {
 extension DietModel {
     static var array: [DietModel] = [
         DietModel(
+            type: "gluten-free",
+            title: "Gluten-Free",
+            description: "Eliminating gluten means avoiding wheat, barley, rye, and other gluten-containing grains and foods made from them (or that may have been cross contaminated).",
+            image: "gluten-free",
+            url: urlBase + urlAPI + urlDiet + "gluten-free" + urlResult + "10"),
+        DietModel(
             type: "ketogenic",
-            title: "Keto",
-            description: "Hate carbs? Carbs hate you too! The keto diet is a fun way to lose weight FAST.",
-            image: "keto.png",
+            title: "Ketogenic",
+            description: "The keto diet is based more on the ratio of fat, protein, and carbs in the diet rather than specific ingredients.",
+            image: "ketogenic",
             url: urlBase + urlAPI + urlDiet + "ketogenic" + urlResult + "10"
         ),
         DietModel(
-            type: "not-keto",
-            title: "Not Keto",
-            description: "Love carbs? Carbs love you too! The non-keto diet is a fun way to gain weight FAST.",
-            image: "not-keto.png",
+            type: "vegetarian",
+            title: "Vegetarian",
+            description: "No ingredients may contain meat or meat by-products, such as bones or gelatin.",
+            image: "keto.png",
             url: urlBase + urlAPI + urlDiet + "ketogenic" + urlResult + "10"
         )
+        
     ]
 }
 

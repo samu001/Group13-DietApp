@@ -19,16 +19,21 @@ struct DietCellModel: View {
     
     var body: some View {
         NavigationLink {
-            RecipeListView(recipes: recipes.results)
+            RecipeListView(diet: model.title, recipes: recipes.results)
         } label: {
             VStack {
                 Text(model.title)
                     .foregroundColor(.black)
-                    .font(.title)
+                    .font(.title).bold()
+                
+                Image(model.image)
+                    .resizable()
+                    .scaledToFit()
                 
                 Text(model.description)
                     .foregroundColor(.black)
             }
+            .padding()
         }.task {
             await recipes.loadData()
         }
