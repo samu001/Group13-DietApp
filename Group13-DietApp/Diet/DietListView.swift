@@ -20,7 +20,7 @@ struct DietListView: View {
             .navigationTitle("Diets")
         }
     }
-} // comment
+} 
 
 struct DietListView_Previews: PreviewProvider {
     static var previews: some View {
