@@ -7,9 +7,19 @@
 
 import Foundation
 
+
+let defaultRecipe: Recipe = Recipe(
+    id: 0,
+    title: "",
+    image: "",
+    summary: "",
+    readyInMinutes: 0,
+    servings: 0,
+    sourceUrl: "")
+
 class recipeAPI: ObservableObject {
     
-    @Published var results = [Recipe]()
+    @Published var results = defaultRecipe
     var url: String!
     
     init(api: String) {
@@ -24,8 +34,8 @@ class recipeAPI: ObservableObject {
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             
-            if let decodedResponse = try? JSONDecoder().decode(RecipeModel.self, from: data) {
-                results = decodedResponse.results
+            if let decodedResponse = try? JSONDecoder().decode(Recipe.self, from: data) {
+                results = decodedResponse
             }
         } catch {
             print("Invalid data")

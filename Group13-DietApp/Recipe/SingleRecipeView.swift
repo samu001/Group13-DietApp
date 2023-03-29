@@ -7,17 +7,26 @@
 
 import SwiftUI
 
+
 struct SingleRecipeView: View {
     
-    let recipe: MiniRecipeModel
+    
+    let url: String
+    var recipe = defaultRecipe
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var api = recipeAPI(api:"")
+    
+    init(url: String) {
+        self.url = url
+        self.api = recipeAPI(api: url)
+    }
     
     var body: some View {
         
         ZStack {
             ScrollView{
                 VStack {
-                    AsyncImage(url: URL(string: recipe.image),
+                    AsyncImage(url: URL(string: api.results.image ),
                                content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fit)
@@ -30,15 +39,15 @@ struct SingleRecipeView: View {
                         } .progressViewStyle(.circular)
                     }
                     )
+                    
+                    
                 }
                 VStack{
-                    Text(recipe.title).padding(.horizontal)
-                    Spacer()
                     
-                    //ingredientBox(recipe.extendedIngredients.de)
-                   
+                    Text(api.results.title).padding(.horizontal)
+                    
                 }
-                .navigationTitle(recipe.title).navigationBarTitleDisplayMode(.inline).padding()
+                .navigationTitle(api.results.title).navigationBarTitleDisplayMode(.inline).padding()
             }
             }
             .background(
@@ -47,12 +56,15 @@ struct SingleRecipeView: View {
                     .brightness(colorScheme == .light ? 0.5 : -0.2)
 
             )
+            .task {
+                await api.loadData()
+            }
     }
 }
 
 struct SingleRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleRecipeView(recipe: exampleMiniRecipes[0])
+         SingleRecipeView(url: "https://api.spoonacular.com/recipes/716429/information?apiKey=d0cdfe10172549139f290c322a14702f&includeNutrition=false")
     }
 }
 

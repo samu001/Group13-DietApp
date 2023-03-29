@@ -10,10 +10,13 @@ import SwiftUI
 struct RecipeCell: View {
     let recipe: MiniRecipeModel
     
+    let urlBase = "https://api.spoonacular.com/recipes/"
+    let urlEnd = "/information?apiKey=d0cdfe10172549139f290c322a14702f&includeNutrition=false"
+    
     var body: some View {
         
         NavigationLink {
-            SingleRecipeView(recipe: recipe)
+            SingleRecipeView(url: urlBase + recipe.id.description + urlEnd)
         } label: {
             HStack {
                 AsyncImage(url: URL(string: recipe.image), content:
