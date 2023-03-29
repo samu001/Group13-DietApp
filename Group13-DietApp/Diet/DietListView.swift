@@ -11,7 +11,6 @@ struct DietListView: View {
     
     let diets: [DietModel]
     
-    
     var body: some View {
         NavigationView {
             List {

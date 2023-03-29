@@ -25,6 +25,8 @@ struct DietCellModel: View {
                 Text(model.title)
                 Text(model.description)
             }
+        }.task {
+            await recipes.loadData()
         }
         
     }

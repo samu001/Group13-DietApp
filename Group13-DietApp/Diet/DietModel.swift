@@ -29,7 +29,7 @@ extension DietModel {
             title: "Keto",
             description: "Hate carbs? Carbs hate you too! The keto diet is a fun way to lose weight FAST.",
             image: "keto.png",
-            url: "https://api.spoonacular.com/recipes/complexSearch?apiKey=d0cdfe10172549139f290c322a14702f&diet=ketogenic&number=10"
+            url: urlBase + urlAPI + urlDiet + "ketogenic" + urlResult + "10"
         ),
         DietModel(
             type: "not-keto",
@@ -40,4 +40,5 @@ extension DietModel {
         )
     ]
 }
+
 
