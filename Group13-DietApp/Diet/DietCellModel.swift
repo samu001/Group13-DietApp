@@ -12,7 +12,10 @@ struct DietCellModel: View {
     let model: DietModel
     
     var body: some View {
-        Text(model.title)
+        VStack {
+            Text(model.title)
+            Text(model.description)
+        }
     }
 }
 

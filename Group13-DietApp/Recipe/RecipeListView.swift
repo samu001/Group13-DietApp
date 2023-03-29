@@ -10,7 +10,6 @@ import SwiftUI
 struct RecipeListView: View {
     let recipes: [Recipe]
     var body: some View {
-        NavigationView {
             List {
                 ForEach(recipes, id: \.id) { recipe in
                    RecipeCell(recipe: recipe)
@@ -18,7 +17,6 @@ struct RecipeListView: View {
             }
             .listStyle(.inset)
             .navigationTitle("Recipes")
-        }
     }
 }
 

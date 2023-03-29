@@ -34,8 +34,7 @@ struct RecipeCell: View {
                         .fontWeight(.semibold)
                         .foregroundColor(Color.primary)
                         .multilineTextAlignment(.leading)
-                        .lineLimit(1)
-                    
+                        .lineLimit(3)
                 }
                 .frame(maxWidth: .infinity)
             }
