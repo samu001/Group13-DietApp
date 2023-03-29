@@ -26,7 +26,6 @@ struct RecipeCell: View {
                         Text("loading...")
                     } .progressViewStyle(.circular).frame(maxWidth: 100)
                 })
-                .frame(height: 120.0)
                 .padding(.zero)
                 
                 VStack (alignment: .leading, spacing: 8) {
