@@ -11,26 +11,20 @@ let urlAPI = "?apiKey=d0cdfe10172549139f290c322a14702f"
 let urlDiet = "&diet=" // ketogenic, etc
 let urlResult = "&number=" // 10 for 10 recipes, etc
 
-struct DietModel {
+
+struct DietModel: Codable {
+    let id: Int
+    let type: String
     
-    let page: Int
-    let results: [staticDiets]
-    
-    
-    struct staticDiets: Codable {
-        let id: Int
-        let type: String
-        
-        let title: String
-        let description: String
-        let image: String
-    }
+    let title: String
+    let description: String
+    let image: String
 }
 
 // put static diets in this array if we do not need them from an API
-extension DietModel.staticDiets {
-    static var array: [DietModel.staticDiets] = [
-        DietModel.staticDiets(
+extension DietModel {
+    static var array: [DietModel] = [
+        DietModel(
             id: 0,
             type: "ketogenic",
             title: "Keto",

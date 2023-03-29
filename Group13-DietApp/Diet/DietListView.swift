@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DietListView: View {
-    let diets: [DietModel.staticDiets]
+    let diets: [DietModel]
     var body: some View {
         NavigationView {
             List {
@@ -24,7 +24,7 @@ struct DietListView: View {
 
 struct DietListView_Previews: PreviewProvider {
     static var previews: some View {
-        DietListView(diets: DietModel.staticDiets.array)
+        DietListView(diets: DietModel.array)
     }
 }
 

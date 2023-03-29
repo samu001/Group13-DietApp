@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            DietListView(diets: DietModel.staticDiets.array)
+            DietListView(diets: DietModel.array)
             
         }
     }
