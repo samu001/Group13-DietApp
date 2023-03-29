@@ -23,7 +23,11 @@ struct DietCellModel: View {
         } label: {
             VStack {
                 Text(model.title)
+                    .foregroundColor(.black)
+                    .font(.title)
+                
                 Text(model.description)
+                    .foregroundColor(.black)
             }
         }.task {
             await recipes.loadData()

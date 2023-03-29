@@ -9,13 +9,18 @@ import SwiftUI
 
 struct DietListView: View {
     
+    var singleColumnGrid = [GridItem(.flexible())]
+    
     let diets: [DietModel]
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(diets, id: \.type) { diet in
-                    DietCellModel(model: diet)
+            ScrollView {
+                LazyVGrid (columns: singleColumnGrid){
+                    ForEach(diets, id: \.type) { diet in
+                        DietCellModel(model: diet)
+                            .padding()
+                    }
                 }
             }
             .listStyle(.inset)
