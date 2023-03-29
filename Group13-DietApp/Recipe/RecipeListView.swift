@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct RecipeListView: View {
-    let recipes: [Recipe]
+    
+    let recipes: [MiniRecipeModel]
     var body: some View {
             List {
                 ForEach(recipes, id: \.id) { recipe in
@@ -22,6 +23,6 @@ struct RecipeListView: View {
 
 struct RecipeListView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeListView(recipes: exampleRecipes)
+        RecipeListView(recipes: exampleMiniRecipes)
     }
 }

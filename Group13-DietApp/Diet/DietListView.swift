@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct DietListView: View {
+    
     let diets: [DietModel]
+    
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(diets, id: \.id) { diet in
+                ForEach(diets, id: \.type) { diet in
                     DietCellModel(model: diet)
                 }
             }

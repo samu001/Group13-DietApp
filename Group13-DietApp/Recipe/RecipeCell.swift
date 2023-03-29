@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipeCell: View {
-    let recipe: Recipe
+    let recipe: MiniRecipeModel
     
     var body: some View {
         
@@ -44,6 +44,6 @@ struct RecipeCell: View {
 
 struct RecipeCell_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeCell(recipe: exampleRecipes[0])
+        RecipeCell(recipe: exampleMiniRecipes[0])
     }
 }

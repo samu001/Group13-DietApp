@@ -10,12 +10,23 @@ import SwiftUI
 struct DietCellModel: View {
     
     let model: DietModel
+    @ObservedObject var recipes = recipeListAPI(api:"")
+    
+    init(model: DietModel) {
+        self.model = model
+        self.recipes = recipeListAPI(api: model.url)
+    }
     
     var body: some View {
-        VStack {
-            Text(model.title)
-            Text(model.description)
+        NavigationLink {
+            RecipeListView(recipes: recipes.results)
+        } label: {
+            VStack {
+                Text(model.title)
+                Text(model.description)
+            }
         }
+        
     }
 }
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SingleRecipeView: View {
     
-    let recipe: Recipe
+    let recipe: MiniRecipeModel
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -52,7 +52,7 @@ struct SingleRecipeView: View {
 
 struct SingleRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleRecipeView(recipe: exampleRecipes[0])
+        SingleRecipeView(recipe: exampleMiniRecipes[0])
     }
 }
 
