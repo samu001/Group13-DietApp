@@ -6,12 +6,6 @@
 //
 import SwiftUI
 
-let urlBase = "https://api.spoonacular.com/recipes/complexSearch"
-let urlAPI = "?apiKey=d0cdfe10172549139f290c322a14702f"
-let urlDiet = "&diet=" // ketogenic, etc
-let urlResult = "&number=1" // 10 for 10 recipes, etc
-
-
 struct DietModel: Codable {
     let type: String
     

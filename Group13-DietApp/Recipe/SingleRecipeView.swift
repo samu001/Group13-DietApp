@@ -34,8 +34,20 @@ struct SingleRecipeView: View {
                 }
                 VStack{
                     
-                    Text(recipe.title).padding(.horizontal)
-                    
+                    Text("Ready in: " + recipe.readyInMinutes.description + " minutes")
+                    Text("Servings: " + recipe.servings.description)
+                    Spacer()
+                    Text(recipe.summary).padding(.horizontal)
+                    Spacer().padding()
+                    VStack {
+                        Link("Link to recipe", destination: URL(string: recipe.sourceUrl)!)
+                            .foregroundColor(.blue)
+                    }
+                    .padding()
+                    .background()
+                    .cornerRadius(16)
+                    .shadow(radius: 8)
+                        
                 }
                 .navigationTitle(recipe.title).navigationBarTitleDisplayMode(.inline).padding()
             }
@@ -44,7 +56,6 @@ struct SingleRecipeView: View {
             AsyncImage(url: URL(string: recipe.image))
                 .blur(radius: 100)
                 .brightness(colorScheme == .light ? 0.5 : -0.2)
-            
         )
         
     }

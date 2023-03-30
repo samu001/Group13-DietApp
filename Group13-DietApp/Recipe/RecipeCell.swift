@@ -15,7 +15,8 @@ struct RecipeCell: View {
     
     init(recipe: MiniRecipeModel) {
         self.miniRecipe = recipe
-        self.api = recipeAPI(api: "https://api.spoonacular.com/recipes/" + miniRecipe.id.description + "/information?apiKey=d0cdfe10172549139f290c322a14702f&includeNutrition=false")
+        let fullUrl = urlSingle + miniRecipe.id.description + "/information" + urlAPI + urlNutritionInfo
+        self.api = recipeAPI(api: fullUrl)
     }
     
     var body: some View {
