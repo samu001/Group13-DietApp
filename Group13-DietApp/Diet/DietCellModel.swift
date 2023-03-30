@@ -30,7 +30,7 @@ struct DietCellModel: View {
                     .resizable()
                     .scaledToFit()
                     .cornerRadius(40)
-
+                
                 Text(model.description)
                     .foregroundColor(.black)
             }

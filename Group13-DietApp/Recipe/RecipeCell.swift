@@ -25,16 +25,16 @@ struct RecipeCell: View {
         } label: {
             HStack {
                 AsyncImage(url: URL(string: miniRecipe.image), content:
-                { image in image.resizable()
+                            { image in image.resizable()
                         .scaledToFit()
-                        .frame(maxWidth: 100)
+                        .frame(maxWidth: 120)
                 },
                            placeholder: {
                     ProgressView(){
                         
                     } .progressViewStyle(.circular).frame(maxWidth: 100)
                 })
-                .padding(.zero)
+                .cornerRadius(16)
                 
                 VStack (alignment: .leading, spacing: 8) {
                     Text(miniRecipe.title)

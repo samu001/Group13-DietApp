@@ -31,8 +31,6 @@ struct SingleRecipeView: View {
                         } .progressViewStyle(.circular)
                     }
                     )
-                    
-                    
                 }
                 VStack{
                     
@@ -41,39 +39,38 @@ struct SingleRecipeView: View {
                 }
                 .navigationTitle(recipe.title).navigationBarTitleDisplayMode(.inline).padding()
             }
-            }
-            .background(
-                AsyncImage(url: URL(string: recipe.image))
-                    .blur(radius: 100)
-                    .brightness(colorScheme == .light ? 0.5 : -0.2)
-
-            )
+        }
+        .background(
+            AsyncImage(url: URL(string: recipe.image))
+                .blur(radius: 100)
+                .brightness(colorScheme == .light ? 0.5 : -0.2)
             
+        )
+        
     }
 }
 
 struct SingleRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-         SingleRecipeView(recipe: exampleRecipes[0])
+        SingleRecipeView(recipe: exampleRecipes[0])
     }
 }
 
 
 func ingredientBox(_ ingredients: [String]) -> some View {
-    return
-        VStack {
-            Text("Ingredients")
-                .font(.title2)
-            VStack{
-                ForEach(ingredients, id: \.self) { string in
-                    Text(string)
-                }
-            }
+    return VStack {
+        Text("Ingredients")
             .font(.title2)
-            .padding()
-            .overlay(
-                RoundedRectangle(cornerRadius: 15)
-                    .stroke(lineWidth: 2)
-            )
-        }.padding()
+        VStack{
+            ForEach(ingredients, id: \.self) { string in
+                Text(string)
+            }
+        }
+        .font(.title2)
+        .padding()
+        .overlay(
+            RoundedRectangle(cornerRadius: 15)
+                .stroke(lineWidth: 2)
+        )
+    }.padding()
 }
