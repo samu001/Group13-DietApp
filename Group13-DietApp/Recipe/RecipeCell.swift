@@ -9,34 +9,35 @@ import SwiftUI
 
 struct RecipeCell: View {
     
-    let recipe: MiniRecipeModel
-    var url = ""
+    let miniRecipe: MiniRecipeModel
+    
+    @ObservedObject var api = recipeAPI(api: "")
     
     init(recipe: MiniRecipeModel) {
-        self.recipe = recipe
-        self.url = "https://api.spoonacular.com/recipes/" + recipe.id.description + "/information?apiKey=d0cdfe10172549139f290c322a14702f&includeNutrition=false"
+        self.miniRecipe = recipe
+        self.api = recipeAPI(api: "https://api.spoonacular.com/recipes/" + miniRecipe.id.description + "/information?apiKey=d0cdfe10172549139f290c322a14702f&includeNutrition=false")
     }
     
     var body: some View {
         
         NavigationLink {
-            SingleRecipeView(url: url)
+            SingleRecipeView(recipe: api.results)
         } label: {
             HStack {
-                AsyncImage(url: URL(string: recipe.image), content:
+                AsyncImage(url: URL(string: miniRecipe.image), content:
                 { image in image.resizable()
                         .scaledToFit()
                         .frame(maxWidth: 100)
                 },
                            placeholder: {
                     ProgressView(){
-                        Text("loading...")
+                        
                     } .progressViewStyle(.circular).frame(maxWidth: 100)
                 })
                 .padding(.zero)
                 
                 VStack (alignment: .leading, spacing: 8) {
-                    Text(recipe.title)
+                    Text(miniRecipe.title)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.primary)
                         .multilineTextAlignment(.leading)
@@ -44,6 +45,8 @@ struct RecipeCell: View {
                 }
                 .frame(maxWidth: .infinity)
             }
+        }.task {
+            await api.loadData()
         }
     }
 }
