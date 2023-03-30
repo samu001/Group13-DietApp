@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-
+import UIKit
+import WebKit
 
 struct SingleRecipeView: View {
     
@@ -68,6 +69,7 @@ struct SingleRecipeView_Previews: PreviewProvider {
 }
 
 
+// currently unused due to complex nature of API
 func ingredientBox(_ ingredients: [String]) -> some View {
     return VStack {
         Text("Ingredients")

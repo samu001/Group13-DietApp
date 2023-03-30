@@ -17,7 +17,7 @@ let defaultRecipe: Recipe = Recipe(
     servings: 0,
     sourceUrl: "")
 
-class recipeAPI: ObservableObject {
+@MainActor class recipeAPI: ObservableObject {
     
     @Published var results = defaultRecipe
     var url: String!
@@ -36,6 +36,9 @@ class recipeAPI: ObservableObject {
             
             if let decodedResponse = try? JSONDecoder().decode(Recipe.self, from: data) {
                 results = decodedResponse
+                // remove the HTML syntax that the API returns
+                results.summary = results.summary.replacingOccurrences(of: "<b>", with: "")
+                results.summary = results.summary.replacingOccurrences(of: "</b>", with: "")
             }
         } catch {
             print("Invalid data")
@@ -44,7 +47,7 @@ class recipeAPI: ObservableObject {
 }
 
 
-class recipeListAPI: ObservableObject {
+@MainActor class recipeListAPI: ObservableObject {
     
     @Published var results = [MiniRecipeModel]()
     var url: String!

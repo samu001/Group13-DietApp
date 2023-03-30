@@ -23,7 +23,7 @@ struct Recipe: Codable {
     let id: Int
     let title: String
     let image: String
-    let summary: String
+    var summary: String
     
     let readyInMinutes: Int
     let servings: Int
@@ -31,6 +31,8 @@ struct Recipe: Codable {
     let sourceUrl: String
 }
 
+
+// These are for TESTING purposes only. 
 
 let exampleRecipes: [Recipe] = [
     Recipe(id: 716429,

@@ -12,9 +12,11 @@ struct RecipeListView: View {
     let diet: String
     let recipes: [MiniRecipeModel]
     var body: some View {
-        List {
-            ForEach(recipes, id: \.id) { recipe in
-                RecipeCell(recipe: recipe)
+        ScrollView {
+            List {
+                ForEach(recipes, id: \.id) { recipe in
+                    RecipeCell(recipe: recipe)
+                }
             }
         }
         .navigationTitle(diet + " Recipes")
