@@ -31,6 +31,32 @@ struct Recipe: Codable {
     let sourceUrl: String
 }
 
+struct EdamamAPI {
+    
+    struct Recipe: Codable {
+        let label: String
+        let image: String
+        let url: String
+        let yield: Double
+        let ingredients: [Ingredient]
+        let calories: Double
+        let totalTime: Double
+    }
+
+    struct Ingredient: Codable {
+        let text: String
+        let weight: Double
+    }
+
+    struct EdamamResponse: Codable {
+        let hits: [Hit]
+    }
+
+    struct Hit: Codable {
+        let recipe: Recipe
+    }
+    
+}
 
 // These are for TESTING purposes only. 
 

@@ -10,19 +10,17 @@ import SwiftUI
 struct RecipeCell: View {
     
     let miniRecipe: MiniRecipeModel
-    
-    @ObservedObject var api = recipeAPI(api: "")
+    var url: String = ""
     
     init(recipe: MiniRecipeModel) {
         self.miniRecipe = recipe
-        let fullUrl = urlSingle + miniRecipe.id.description + "/information" + urlAPI + urlNutritionInfo
-        self.api = recipeAPI(api: fullUrl)
+        self.url = urlSingle + miniRecipe.id.description + "/information" + urlAPI + urlNutritionInfo
     }
     
     var body: some View {
         
         NavigationLink {
-            SingleRecipeView(recipe: api.results)
+            SingleRecipeView(url: url)
         } label: {
             HStack {
                 AsyncImage(url: URL(string: miniRecipe.image), content:
@@ -46,8 +44,6 @@ struct RecipeCell: View {
                 }
                 .frame(maxWidth: .infinity)
             }
-        }.task {
-            await api.loadData()
         }
     }
 }

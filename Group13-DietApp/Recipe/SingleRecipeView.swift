@@ -11,15 +11,21 @@ import WebKit
 
 struct SingleRecipeView: View {
     
-    let recipe: Recipe
+    let url: String
+    @ObservedObject var api = recipeAPI(api: "")
     @Environment(\.colorScheme) var colorScheme
+    
+    init(url: String) {
+        self.url = url
+        self.api = recipeAPI(api: url)
+    }
     
     var body: some View {
         
         ZStack {
             ScrollView{
                 VStack {
-                    AsyncImage(url: URL(string: recipe.image ),
+                    AsyncImage(url: URL(string: api.results.image ),
                                content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fit)
@@ -35,13 +41,13 @@ struct SingleRecipeView: View {
                 }
                 VStack{
                     
-                    Text("Ready in: " + recipe.readyInMinutes.description + " minutes")
-                    Text("Servings: " + recipe.servings.description)
+                    Text("Ready in: " + api.results.readyInMinutes.description + " minutes")
+                    Text("Servings: " + api.results.servings.description)
                     Spacer()
-                    Text(recipe.summary).padding(.horizontal)
+                    Text(api.results.summary).padding(.horizontal)
                     Spacer().padding()
                     VStack {
-                        Link("Link to recipe", destination: URL(string: recipe.sourceUrl)!)
+                        Link("Link to recipe", destination: URL(string: api.results.sourceUrl) ?? URL(string:"https://www.google.com")! )
                             .foregroundColor(.blue)
                     }
                     .padding()
@@ -50,21 +56,24 @@ struct SingleRecipeView: View {
                     .shadow(radius: 8)
                         
                 }
-                .navigationTitle(recipe.title).navigationBarTitleDisplayMode(.inline).padding()
+                .navigationTitle(api.results.title).navigationBarTitleDisplayMode(.inline).padding()
             }
         }
         .background(
-            AsyncImage(url: URL(string: recipe.image))
+            AsyncImage(url: URL(string: api.results.image))
                 .blur(radius: 100)
                 .brightness(colorScheme == .light ? 0.5 : -0.2)
         )
+        .task {
+            await api.loadData()
+        }
         
     }
 }
 
 struct SingleRecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleRecipeView(recipe: exampleRecipes[0])
+        SingleRecipeView(url: "")
     }
 }
 
