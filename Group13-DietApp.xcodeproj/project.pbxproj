@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6899B2AE29E5E19100BFDC14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899B2AD29E5E19100BFDC14 /* User.swift */; };
+		6899B2B029E5E1C200BFDC14 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899B2AF29E5E1C200BFDC14 /* FirebaseManager.swift */; };
+		6899B2B229E5E23B00BFDC14 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6899B2B129E5E23B00BFDC14 /* GoogleService-Info.plist */; };
+		6899B2BA29E5E81500BFDC14 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6899B2B929E5E81500BFDC14 /* FirebaseAuth */; };
+		6899B2BC29E5E81500BFDC14 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6899B2BB29E5E81500BFDC14 /* FirebaseFirestore */; };
+		6899B2BE29E5E81500BFDC14 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6899B2BD29E5E81500BFDC14 /* FirebaseStorage */; };
+		6899B2C529E5EC5500BFDC14 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6899B2C429E5EC5500BFDC14 /* LoginView.swift */; };
 		75F69B6629CE015A00F6EE36 /* Group13_DietApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B6529CE015A00F6EE36 /* Group13_DietApp.swift */; };
 		75F69B6829CE015A00F6EE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F69B6729CE015A00F6EE36 /* ContentView.swift */; };
 		75F69B6A29CE015A00F6EE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F69B6929CE015A00F6EE36 /* Assets.xcassets */; };
@@ -22,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6899B2AD29E5E19100BFDC14 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6899B2AF29E5E1C200BFDC14 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		6899B2B129E5E23B00BFDC14 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6899B2C429E5EC5500BFDC14 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		75F69B6229CE015A00F6EE36 /* Group13-DietApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Group13-DietApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F69B6529CE015A00F6EE36 /* Group13_DietApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group13_DietApp.swift; sourceTree = "<group>"; };
 		75F69B6729CE015A00F6EE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +54,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6899B2BA29E5E81500BFDC14 /* FirebaseAuth in Frameworks */,
+				6899B2BC29E5E81500BFDC14 /* FirebaseFirestore in Frameworks */,
+				6899B2BE29E5E81500BFDC14 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +90,10 @@
 				75F8A2E729D3C8C8004297D7 /* Diet */,
 				75F8A2E829D3C8D3004297D7 /* Recipe */,
 				75F69B7B29CE063000F6EE36 /* APIController.swift */,
+				6899B2AF29E5E1C200BFDC14 /* FirebaseManager.swift */,
+				6899B2C429E5EC5500BFDC14 /* LoginView.swift */,
+				6899B2AD29E5E19100BFDC14 /* User.swift */,
+				6899B2B129E5E23B00BFDC14 /* GoogleService-Info.plist */,
 			);
 			path = "Group13-DietApp";
 			sourceTree = "<group>";
@@ -125,6 +143,11 @@
 			dependencies = (
 			);
 			name = "Group13-DietApp";
+			packageProductDependencies = (
+				6899B2B929E5E81500BFDC14 /* FirebaseAuth */,
+				6899B2BB29E5E81500BFDC14 /* FirebaseFirestore */,
+				6899B2BD29E5E81500BFDC14 /* FirebaseStorage */,
+			);
 			productName = "Group13-DietApp";
 			productReference = 75F69B6229CE015A00F6EE36 /* Group13-DietApp.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 75F69B5929CE015A00F6EE36;
+			packageReferences = (
+				6899B2B829E5E81500BFDC14 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 75F69B6329CE015A00F6EE36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -169,6 +195,7 @@
 			files = (
 				75F8A2E329D3BC09004297D7 /* Preview Assets.xcassets in Resources */,
 				75F69B6A29CE015A00F6EE36 /* Assets.xcassets in Resources */,
+				6899B2B229E5E23B00BFDC14 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6899B2B029E5E1C200BFDC14 /* FirebaseManager.swift in Sources */,
+				6899B2AE29E5E19100BFDC14 /* User.swift in Sources */,
 				75F69B7C29CE063000F6EE36 /* APIController.swift in Sources */,
 				75F69B7429CE024600F6EE36 /* DietListView.swift in Sources */,
 				75F69B7A29CE03B700F6EE36 /* DietModel.swift in Sources */,
@@ -187,6 +216,7 @@
 				75F8A2E629D3C8BE004297D7 /* DietCellModel.swift in Sources */,
 				75F69B6829CE015A00F6EE36 /* ContentView.swift in Sources */,
 				75F69B7629CE033F00F6EE36 /* RecipeListView.swift in Sources */,
+				6899B2C529E5EC5500BFDC14 /* LoginView.swift in Sources */,
 				75F69B7F29CE2D9F00F6EE36 /* SingleRecipeView.swift in Sources */,
 				75F69B6629CE015A00F6EE36 /* Group13_DietApp.swift in Sources */,
 			);
@@ -387,6 +417,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6899B2B829E5E81500BFDC14 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6899B2B929E5E81500BFDC14 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6899B2B829E5E81500BFDC14 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6899B2BB29E5E81500BFDC14 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6899B2B829E5E81500BFDC14 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6899B2BD29E5E81500BFDC14 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6899B2B829E5E81500BFDC14 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75F69B5A29CE015A00F6EE36 /* Project object */;
 }

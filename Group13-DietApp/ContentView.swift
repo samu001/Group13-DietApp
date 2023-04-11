@@ -10,7 +10,7 @@ import SwiftUI
 // urlBase + urlAPI + diet + diet_parameter + resultNumber + integer
 
 let urlBase = "https://api.spoonacular.com/recipes/complexSearch"
-let urlAPI = "?apiKey=d0cdfe10172549139f290c322a14702f"
+let urlAPI = "?apiKey=9f9874c4519949798c78d38210fba603"
 let urlDiet = "&diet=" // ketogenic, etc
 let urlResult = "&number=5" // 5 for 5 recipes; set due to API limitation
 
@@ -23,11 +23,5 @@ struct ContentView: View {
         VStack {
             DietListView(diets: DietModel.array)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
