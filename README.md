@@ -3,7 +3,7 @@
 App created for FIU Group 13. 
 
 Packages Dependencies: 
-Firebae (8.0.0)
+Firebase (8.0.0)
 https://github.com/firebase/firebase-ios-sdk.git
 
 Firebase Auth, Firebase Storage, Firebase Store
