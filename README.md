@@ -10,4 +10,4 @@ Firebase Auth, Firebase Storage, Firebase Store
 
 Video:
 
-![Simulator Screen Recording - iPhone 14 Pro Max - 2023-04-04 at 15 03 55](https://user-images.githubusercontent.com/69062179/229894791-b7457017-4675-4400-b9a1-dc8c21faca0b.gif)
+![demogif](https://user-images.githubusercontent.com/62515928/231274859-7fc3045e-8b63-474f-be00-c6bb728c5224.gif)
