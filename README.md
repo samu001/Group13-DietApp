@@ -51,13 +51,13 @@ Team:
 * #1 Diet Selection: User should be able to select a diet type.
 * #2 Recipe List: User should see a list of recipes for the current diet.
 * #3 Recipe Steps:User should see a step by step process of the recipe.
-* #4 User should be able to log in
-* #5 User should be able to log out
+* #4 User should be able to log in.
+* #5 User should be able to log out.
+* #6 User should have permanent log in after closing the app.
 
 **Optional Nice-to-have Stories**
-
-* Users should be able to log in their accounts.
-* Users should be able to like recipes and save them for easy access.
+* Users should be able to like recipes and save them.
+* User should be able to upload a profile picture.
 
 ### 2. Screen Archetypes
 * Log in/Create account screen
