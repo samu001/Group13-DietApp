@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # PlatePal
 
 ## Table of Contents
@@ -25,10 +22,12 @@ Team:
 
 ## Video Walkthrough
 ### Account Creation
-<img src="https://user-images.githubusercontent.com/62515928/232084076-660a7e85-65d4-4e0e-b50e-0475eab3d637.gif" width="182" height="383"/>
+<img src="https://user-images.githubusercontent.com/62515928/232092396-9de5b02f-246e-4478-85ac-bdd9feb0e8ac.gif" width="182" height="383"/>
 
 ### Diets and Recipes
 ![1](https://user-images.githubusercontent.com/62515928/232083909-7c79256f-2fcf-4040-8d9f-5fac7546f117.gif)
+
+
 
 
 
